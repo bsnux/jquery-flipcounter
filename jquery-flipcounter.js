@@ -72,16 +72,35 @@ var flipCounter = function(d, options){
 	}
 	
 	function animateDigit(n, oldDigit, newDigit){
+        var pace = 800;
 		var speed, step = 0, w,
-		bp = [
-			'-' + frameWidth + 'px -' + (oldDigit * tFrameHeight) + 'px',
-			(frameWidth * -2) + 'px -' + (oldDigit * tFrameHeight) + 'px',
-			'0 -' + (newDigit * tFrameHeight) + 'px',
-			'-' + frameWidth + 'px -' + (oldDigit * bFrameHeight) + 'px',
-			(frameWidth * -2) + 'px -' + (newDigit * bFrameHeight) + 'px',
-			(frameWidth * -3) + 'px -' + (newDigit * bFrameHeight) + 'px',
-			'0 -' + (newDigit * bFrameHeight) + 'px'
-		];
+        bp = [
+            '-' + frameWidth + 'px -' + (oldDigit * tFrameHeight) + 'px',
+            (frameWidth * -2) + 'px -' + (oldDigit * tFrameHeight) + 'px',
+            '0 -' + (newDigit * tFrameHeight) + 'px',
+            '-' + frameWidth + 'px -' + (oldDigit * bFrameHeight) + 'px',
+            (frameWidth * -2) + 'px -' + (newDigit * bFrameHeight) + 'px',
+            (frameWidth * -3) + 'px -' + (newDigit * bFrameHeight) + 'px',
+            '0 -' + (newDigit * bFrameHeight) + 'px'
+        ];
+
+        switch (n){
+            case 0:
+                speed = pace/6;
+                break;
+            case 1:
+                speed = pace/5;
+                break;
+            case 2:
+                speed = pace/4;
+                break;
+            case 3:
+                speed = pace/3;
+                break;
+            default:
+                speed = pace/2;
+                break;
+        }
 
 		speed = (speed > 80) ? 80 : speed;
 		
