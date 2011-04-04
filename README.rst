@@ -28,8 +28,7 @@ Please, take a look at *index.html* file.
 Public methods
 --------------
 
-*setValue()*: An integer is required as parameter. This method sets
- the value of the counter. 
+*setValue()*: An integer is required as parameter. This method sets the value of the counter. 
 
 Example
 -------
