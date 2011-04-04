@@ -11,7 +11,7 @@
  * http://cnanney.com/journal/code/apple-style-counter-revisited/
  * http://cnanney.com/journal/code/apple-style-counter/
  * 
- * Modify by: Arturo Fernandez
+ * Modified by: Arturo Fernandez
  * 
  * Licensed under MIT
  * http://www.opensource.org/licenses/mit-license.php
