@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery-flipcounter.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery-flipcounter.css" />
+    <style type="text/css" media="screen">
+      .blankspace {
+         clear: both;
+      }
+    </style>
+</head>
+
+<body>
+
+	<div id="counter"></div>
+    <div class="blankspace"/>
+    <div id="counter2"></div>
+
+	<script type="text/javascript">
+    var counter = 120;
+    var counter2 = 1300;
+
+    var updateMsc = 2000;
+    var myCounter = new flipCounter('counter', {value:counter});
+
+    var myCounter2 = new flipCounter('counter2', {value:counter2});
+
+    function updateCounter() {
+       myCounter.setValue(counter++);
+       myCounter2.setValue(counter2++);
+    }
+
+    setInterval(updateCounter, updateMsc);
+
+	</script>
+</body>
+
+</html>
